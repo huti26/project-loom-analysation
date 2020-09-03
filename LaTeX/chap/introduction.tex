@@ -1,0 +1,20 @@
+\chapter{Introduction}
+Solaris 2.6  was released in July 1997. \cite{wiki:solaris} Before Solaris 2.6 was released Java versions on the Solaris platform used green threads.
+Green threads were user-level threads, scheduled by the programmers themselves instead of relying on the operating system. Solaris was unable to process more than one green thread at a time, which resulted in a many-to-one model. Java applications were able to create as many green threads per application as they wanted to, but only one of them would be processed at a time. Therefore multithreading was impossible for Java applications on Solaris. \cite{oracle:solaris} With this big problem in mind, Sun Microsystems started to abandon green threads.
+Several different solutions were used over the years depending on which platform Java was running on. Nowadays it is universally known that a Java thread corresponds to a kernel-level thread when looking at it in a very simplified matter.
+\\
+\\
+About two decades after green threads were abandoned, project Loom is trying to bring user-level threads back into the Java ecosystem. The reason for this is the heavy weight of kernel-level threads and the growing popularity of extreme multithreading. Particularly in cloud computing resources are scarce. Project Loom is sponsored by the HotSpot Group and therefore Oracle themselves. It is part of OpenJDK's Java Virtual Machine: HotSpot. Project Loom calls their user-level threads virtual threads. \cite{loom:proposal}
+\\
+\\
+The goals of this work are:
+\begin{itemize}
+    \item Examining how project Loom implements virtual threads.
+    \item Comparing virtual threads to common Java threads.
+    \item Giving a forecast for the future of virtual threads.
+\end{itemize}
+In the first chapter of this thesis, the required basics will be explained. Afterwards, the architecture of project Loom's virtual threads is analyzed. Once that is done, the virtual threads will be used in experiments in the following chapter. Finally, a conclusion is drawn.
+
+
+
+

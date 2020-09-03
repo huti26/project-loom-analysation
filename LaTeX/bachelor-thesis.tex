@@ -1,0 +1,82 @@
+\documentclass{template/abschlussarbeit}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Allgemeine Variablen fuer die Abschlussarbeit (mit eigenen
+% Angaben ausfuellen!)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\AutorVorname{Hutan}
+\AutorNachname{Baghery Moghaddam}
+\AutorGeburtsort{Leverkusen}
+\AbschlussarbeitTitel{User-Level Thread-Management in Java}
+% Bachelorarbeit, Projektarbeit, Masterarbeit
+\AbschlussarbeitTyp{Bachelor Thesis}
+% keywords durch , getrennt
+\AbschlussarbeitKeywords{Distributed Systems, Big Data, Cloud}
+\Ort{Düsseldorf}
+\Datum{19. March 2020}
+\Erstgutachter{Prof. Dr. Michael Schöttner}
+\Zweitgutachter{Dr. Jens Bendisposto}
+
+% Hier den vollstaendigen Dateinamen der bibtex Datei angeben
+% Falls diese in einem Unterordner liegt, so ist dieser relativ
+% zu dieser Datei (document.tex) anzugeben.
+\LiteraturBibtexDatei{library.bib}
+
+% Der Anhang (falls vorhanden) wird hier genauso wie diese
+% Bibtex-Datei angegeben (jedoch ohne .tex-Endung!)
+\AnhangDatei{chap/anhang}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Optionen/Schalter um bestimmte Abschnitte an-/auszuschalten
+% WICHTIG: Nicht genutzte/leere Abschnitte vor der Abgabe/
+% dem finalen Druck abschalten durch auskommentieren.
+% Gleiches gilt fuer die Todo Liste, welche nicht in die 
+% finale Version gehoert.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\Titelblatt
+\Inhaltsverzeichnis
+\Abbildungsverzeichnis
+\Anhang
+\Erklaerung
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Custom additions
+
+\lstdefinelanguage{custom-java}
+{
+    language=java,
+    % morecomment=[s][\color{gray}]{@}{\ },
+    morekeywords={var},
+}
+
+\lstdefinelanguage{no-numbers}
+{
+    language=java,
+    numbers=none,
+}
+
+\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\\}
+
+\newcommand{\at}{\makeatletter @\makeatother}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\begin{abschlussarbeit}
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \include{chap/introduction}
+    \include{chap/background}
+    \include{chap/architecture}
+    \include{chap/experiment}
+    \include{chap/conclusion}
+
+\end{abschlussarbeit}
+\end{document}
+

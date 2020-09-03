@@ -1,0 +1,12 @@
+\chapter{Conclusion}
+This thesis consists of two major parts.
+\\
+\\
+The first one is the code analysis. Analyzing a work in progress is a time-intensive task. Documentation existed almost exclusively in Java comments here and there in the code. The only way to deal with that problem was to simply invest more time in the analysis. That worked up until intrinsics appeared. There is information regarding HotSpot intrinsics on the internet, but those are very general. For specific information regarding intrinsics in project Loom, the solution was to contact the maintainers directly. Once that information was gained, it was obvious, that the intrinsics of project Loom are beyond the scope of this thesis.
+\\
+\\
+The second one is the experiment. There were two experiments. The first one consisted of running the JMH benchmarks project Loom uses themselves. To understand them, one had to read the documentation of the JMH framework thoroughly. Afterwards, one could simply run them and plot the results. Project Loom is still doing a lot of tests in regards to performance. Future works regarding project Loom might be able to pick up these results and compare them to the results of newer versions.
+\\
+The second experiment was intended to simulate a big-data-framework. Resources were limited both hardware and software-wise. Originally, the experiment was intended to be run on the cluster of the Operating Systems Research group. Due to COVID-19, the experiment had to be run on personal hardware instead. Also, because the thesis was already very time intensive in regards to the code analysis, there wasn't infinite time to create a very complex piece of software. Despite that, the software still had to be realistic. Therefore the decision was made, to use an EchoServer. The EchoServer combined elements of networking and multithreading, without demanding too much time to code it.
+\\
+Finally, benchmarks could be run. Once again, time was a limiting factor here. For example, one benchmark, that did not end up being included in the thesis, had the following parameters: 1.000.000 requests and n=100. Running a single set of 1.000.000 requests using kernel threads took up to 1minute. So just running the kernel thread benchmark took around 1,5h. Often, the benchmark would crash during that too. So the benchmark had to be ran multiple times to ensure, that the results are accurate. That ended up being too time intensive. Therefore, the decision was made, to rather run small benchmarks. If one of these benchmarks failed, the damage was much smaller. 
