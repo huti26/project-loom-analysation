@@ -1,2 +1,3 @@
-# Bachelor-Thesis
-All folders used to be their own git repos. Therefore the .gitignore files are inside and should be moved to the top level in case one wants to change the contents.
+# Project Loom Analysation
+
+This repository contains my Bachelor's Thesis, which analyzes [Project Loom](https://wiki.openjdk.org/display/loom/Main) by OpenJDK.
