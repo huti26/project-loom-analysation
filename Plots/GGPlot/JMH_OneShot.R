@@ -30,8 +30,13 @@ g <- g +
     x = "paramCount",
     y = "Time in Nanoseconds",
     caption = "n=5")+
-  scale_fill_manual(values = cbp1)
+  scale_fill_manual(values = cbp1) +
+  theme(
+    text = element_text(size = 14),
+    plot.margin = margin(t = 0.5, r = 1, b = 0.5, l = 1, unit = "cm"),
+    strip.text.x = element_text(size = 10)
+  )
   
 print(g)
 
-ggsave(plot=g,"./JMH/Plots/OneShot.png",width=8.17,height=6)
+ggsave(plot=g,"./JMH/Plots/OneShot.png",width=10.17,height=6)

@@ -9,6 +9,8 @@ sns.set_context("paper", font_scale=1.5)
 # read all
 data = pd.read_csv("../CSV/all.csv")
 
+print(data)
+
 # filter Benchmarks
 data = data.loc[data['runs'] == 100]
 data = data.loc[data['requests'] <= 100000]
@@ -34,7 +36,7 @@ axes[0][0].yaxis.set_major_locator(ticker.MultipleLocator(0.05))
 axes[0][1].yaxis.set_major_locator(ticker.MultipleLocator(0.01))
 
 
-# plt.show()
+plt.show()
 
-plot_folder = "../Plots/"
-plt.savefig(plot_folder + "boxplots-t-100.png", bbox_inches='tight')
+# plot_folder = "../Plots/"
+# plt.savefig(plot_folder + "boxplots-t-100.png", bbox_inches='tight')
