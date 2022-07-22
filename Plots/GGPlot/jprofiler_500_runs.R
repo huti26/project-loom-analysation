@@ -40,7 +40,7 @@ scatter_plot_1000 <- ggplot(data.1000) + geom_point(aes(y=time,x=run_number, col
 
 print(scatter_plot_1000)
 
-# ggsave(plot=scatter_plot_1000,"./Footprint/scatter_plot_10000.png",width=8.17,height=3.5)
+ggsave(plot=scatter_plot_1000,"./Footprint/scatter_plot_10000.png",width=8.17,height=6.5)
 
 linreg_plot_1000 <- ggplot(data.1000) + geom_smooth(method = "lm",aes(y=time,x=run_number, color=type), size = 1.2) +
   facet_wrap(~requests.char, scales = "free") +
@@ -62,7 +62,7 @@ linreg_plot_1000 <- ggplot(data.1000) + geom_smooth(method = "lm",aes(y=time,x=r
 
 print(linreg_plot_1000)
 
-# ggsave(plot=linreg_plot_1000,"./Footprint/linreg_plot_10000.png",width=8.17,height=3.5)
+ggsave(plot=linreg_plot_1000,"./Footprint/linreg_plot_10000.png",width=8.17,height=6.5)
 
 
 box_plot <- ggplot(data.1000) + geom_boxplot2(aes(y=time, fill=type), width = 0.5, width.errorbar = 0.1, size = 0.8) +
@@ -85,5 +85,5 @@ box_plot <- ggplot(data.1000) + geom_boxplot2(aes(y=time, fill=type), width = 0.
 
 print(box_plot)
 
-ggsave(plot=box_plot,"./Footprint/boxplot_10000.png",width=8.17,height=3.5)
+ggsave(plot=box_plot,"./Footprint/boxplot_10000.png",width=8.17,height=6.5)
 
